@@ -7,7 +7,7 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBase {
   private static final long serialVersionUID = 8747090203382430010L;
 
 
