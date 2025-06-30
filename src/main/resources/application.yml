@@ -1,3 +1,18 @@
 spring:
   application:
     name: notification-service
+  
+  # Email Configuration
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 587
+    username: 77de9fa5b9ff50
+    password: 83b1661ef6ec65
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+        debug: false
