@@ -17,6 +17,7 @@ java {
 
 repositories {
 	mavenCentral()
+	maven { url = uri("https://packages.confluent.io/maven/") }
 }
 
 dependencies {
@@ -32,6 +33,7 @@ dependencies {
 
 	// avro generate
 	implementation("org.apache.avro:avro:1.11.4")
+    implementation("io.confluent:kafka-avro-serializer:7.4.0")
 }
 
 
