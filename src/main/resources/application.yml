@@ -22,6 +22,7 @@ spring:
     port: 587
     username: 77de9fa5b9ff50
     password: 83b1661ef6ec65
+    from: "noreply@yourcompany.com" 
     properties:
       mail:
         smtp:
