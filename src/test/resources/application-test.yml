@@ -1,0 +1,18 @@
+spring:
+  mail:
+    host: localhost
+    port: 1025  # MailHog port for testing
+    from: test@example.com
+  
+  kafka:
+    bootstrap-servers: localhost:9093
+    consumer:
+      group-id: test-notification-service
+      auto-offset-reset: earliest
+    input:
+      topic:
+        order-completed: test-order-completed-topic
+
+logging:
+  level:
+    com.loc.notification_service: DEBUG 

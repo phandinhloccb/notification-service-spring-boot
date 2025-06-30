@@ -34,6 +34,12 @@ dependencies {
 	// avro generate
 	implementation("org.apache.avro:avro:1.11.4")
     implementation("io.confluent:kafka-avro-serializer:7.4.0")
+
+	// testing
+	testImplementation("io.mockk:mockk:1.13.8")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.springframework.kafka:spring-kafka-test")
+	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 
