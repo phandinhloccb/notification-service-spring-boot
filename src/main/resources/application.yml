@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: notification-service
+
+  # kafka
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      group-id: notification-service
+      properties:
+        schema.registry.url: http://localhost:8085
+        specific.avro.reader: true
+    input:
+      topic:
+        order-completed: orders.order.completed.v1
+  
+  # Email Configuration
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 587
+    username: 77de9fa5b9ff50
+    password: 83b1661ef6ec65
+    from: "noreply@yourcompany.com" 
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+        debug: false
