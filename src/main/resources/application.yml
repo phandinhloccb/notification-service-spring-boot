@@ -20,8 +20,8 @@ spring:
   mail:
     host: sandbox.smtp.mailtrap.io
     port: 587
-    username: 77de9fa5b9ff50
-    password: 83b1661ef6ec65
+    username: xx
+    password: xx
     from: "noreply@yourcompany.com" 
     properties:
       mail:
@@ -31,3 +31,39 @@ spring:
             enable: true
             required: true
         debug: false
+
+
+server: 
+  port: 8088
+
+
+# Spring Boot Actuator Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus  # Explicitly include metrics and prometheus
+      base-path: ""
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+      probes:
+        enabled: true
+    metrics:
+      enabled: true  # Explicitly enable metrics
+    prometheus:
+      enabled: true  # Explicitly enable prometheus
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+    mongo:
+      enabled: true
+  server:
+    port: 8088
+  metrics:
+    export:
+      prometheus:
+        enabled: true  # Enable Prometheus metrics export

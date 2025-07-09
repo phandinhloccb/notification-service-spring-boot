@@ -22,6 +22,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-mail")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.kafka:spring-kafka")
@@ -30,6 +31,10 @@ dependencies {
 	testImplementation("org.springframework.kafka:spring-kafka-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
+
+
+	// Micrometer Prometheus for /actuator/prometheus endpoint
+	implementation("io.micrometer:micrometer-registry-prometheus")
 
 	// avro generate
 	implementation("org.apache.avro:avro:1.11.4")
